@@ -6,9 +6,9 @@ saveBtn.innerText = "Lägg till";
 
 renderToDo();
 
-/*-----------------
-Lägga till i listan
--------------------*/
+/*--------------------
+ADD ITEM TO TO DO LIST
+----------------------*/
 saveBtn.addEventListener("click", (event) => {
     event.preventDefault();
     let addInputValue = addInput.value;
@@ -26,8 +26,3 @@ saveBtn.addEventListener("click", (event) => {
 
     renderToDo();
 });
-
-
-
-
-

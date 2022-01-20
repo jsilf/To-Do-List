@@ -1,12 +1,8 @@
-//För att lägga till en ny item till en lista.
-//För att radera en item.
-//För att markera en item som “klar”.
-
 let toDoContent = document.getElementById("toDoContent");
 
-/*------------------- 
-Rendera to do listan
----------------------*/
+/*--------------- 
+RENDER TO DO LIST
+-----------------*/
 export function renderToDo() {
     toDoContent.innerHTML = "";
     let toDoList = document.createElement("ul");
@@ -20,25 +16,9 @@ export function renderToDo() {
         toDoItem.innerHTML = listFromLS[i];
         toDoList.append(toDoItem);
 
-        /*----------------------------------------------------- 
-        Ikon som sedan används nedan för att ta bort listobjekt
-        samt bocka av med knapp
-        -------------------------------------------------------*/
-
-        let iconDone = document.createElement("i");
-        iconDone.className = "fas fa-circle";
-        iconDone.id = i;
-        toDoItem.prepend(iconDone);
-
-        iconDone.addEventListener("click", () => {
-
-            let lineThrough = toDoItem;
-            localStorage.setItem("saveLineThrough", lineThrough);
-            lineThrough.style.textDecoration = "line-through 2px";
-
-            //localstorage på style fungerar ej
-        });
-
+        /*----------------- 
+        ICON TO DELETE ITEM
+        -------------------*/
         let icon = document.createElement("i");
         icon.className = "far fa-circle";
         icon.id = i;
@@ -54,11 +34,11 @@ export function renderToDo() {
     toDoContent.append(toDoList);
 }
 
-//Hämta alla listor och items.
+/*---------- 
+LOCALSTORAGE
+------------*/
 export function getToDo() {
-
     let getThings = localStorage.getItem("saveThings");
-    // let getLine = localStorage.getItem("saveLineThrough");
 
     if (getThings) {
         getThings = JSON.parse(getThings);
