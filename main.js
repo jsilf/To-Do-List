@@ -22,7 +22,7 @@ saveBtn.addEventListener("click", (event) => {
         localStorage.setItem("saveThings", JSON.stringify(toDoList));
     };
 
-    document.getElementById("addInput").value = "";//nollställ input efter klick
+    document.getElementById("addInput").value = "";
 
     renderToDo();
 });

@@ -1,3 +1,4 @@
+
 let toDoContent = document.getElementById("toDoContent");
 
 /*--------------- 
@@ -47,7 +48,3 @@ export function getToDo() {
     }
     return getThings;
 }
-
-
-
-

@@ -1,0 +1,60 @@
+body {
+    @include myfont;
+    background-color: #335c67;
+    color: #fff3b0;
+}
+
+header {
+    @include display;
+    margin-bottom: 2rem;
+    
+    h1 {
+        text-align: center;
+        padding: 2rem 7rem;
+        background-color: #172d33;
+    }
+}
+
+main {
+    @include display;
+    flex-direction: column;
+    margin: 3% 6%;
+    .todoForm {
+        @include display;
+    
+        input {
+            @include myfont;
+            width: 20rem;
+            height: 2rem;
+            padding: 0 0.5rem;
+        }
+        button {
+            @include myfont;
+            color: #172d33;
+            font-weight: 900;
+            margin: 0 1%;
+            background-color: #fff3b0;
+            width: 6rem;
+        }
+    }
+    li {
+        font-size: 1.2rem;
+        display: block;
+        margin-top: 2rem;
+    }
+    #toDoContent { width: 30rem; }
+
+    i {
+        margin-left: 1.5rem;
+        margin-right: 1rem;
+    }
+}
+
+hr { border: 1px solid #fff3b0; }
+
+footer {
+    margin: 2%;
+    @include display;
+
+    p { font-size: 0.7rem; }
+}
